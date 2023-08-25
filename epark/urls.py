@@ -19,6 +19,7 @@ from django.urls import path
 from . import views
 from parking.views import ParkingListView
 from django.urls import include
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -36,3 +37,5 @@ urlpatterns = [
     #path("owner/logout", views.logout_owner_view, name="logout_owner"),
     
 ]
+
+urlpatterns += staticfiles_urlpatterns()
